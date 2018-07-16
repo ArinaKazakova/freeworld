@@ -1,0 +1,321 @@
+body, html, section {
+    /* important */
+    height: 100%;
+}
+
+
+body{
+    font-family: 'Cabin Sketch';
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    color: #2f464e;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, p{
+  margin:0;
+  padding: 0;
+}
+
+ h1{
+  font-size: 6em;
+}
+h5{
+  font-size: 2em;
+}
+p{
+   font-size: 28px;
+}
+
+          /* Контейнер для текста */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container_menu {
+  width: 90%;
+  margin: 0 auto;
+}
+        /* Фиксированный задниц фон */
+
+.cd-fixed-bg {
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("img/bg1.png");
+}
+
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("img/bg2.png");
+
+}
+
+
+              /* Header */
+#header{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+        
+        /* Раскрывающееся меню */
+#burger {
+   
+  float: right;
+  position: relative;
+  width: 35px;
+  height: 55px;
+  background: #fff;
+  padding: 0;
+  cursor: pointer;
+  z-index: 30;
+}
+
+#burger span {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #2f464e;
+  font-size: 0px;
+  user-select: none;
+  transition: background-color 1s;
+}
+#burger span:before,
+#burger span:after {
+  position: absolute;
+  
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2f464e;;
+  content: '';
+
+}
+
+#burger span:before {
+  transform: translateY(-250%);
+}
+#burger span:after {
+  transform: translateY(250%);
+}
+
+/* ____________________________________________ */
+#menu {
+  float: right;
+}
+.logo {
+  margin: 20px 10px;
+  float: left;
+}
+
+.menu li, a{
+  display: inline-block;
+  padding:4px 10px;
+  text-decoration: none;
+  color: #2f464e;
+  font-size: 20px;
+  outline: none;
+  transition: 1s;
+}
+
+.menu a:hover {
+  font-size: 22px;
+  
+}
+
+              /*  Заголовок */
+.title{
+  border:solid 8px #2f464e;
+  padding: 40px;
+  position: absolute;
+  display: inline-block;
+  top: 49%; 
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+.first_section {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.first_section h2{
+  padding: 30px 0;
+  font-size: 50px;
+}
+
+.items{
+  margin: 20px auto;
+ display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+
+}
+
+.item {
+  width: 280px;
+  padding: 5px;
+  margin: 20px;
+}
+.item img {
+  width: 250px;
+
+}
+
+.item:hover img{
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.sub {
+  padding: 10px 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.fixed {
+  height: 100%;
+
+   /* padding: 550px 0; */
+}
+.fixed_text {
+ padding: 50% 30px;  
+  color: #fff;
+ /*  background:rgba(0,0,0,0.7); */
+  text-align: justify;
+}
+
+#call {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background: #31769a;
+  border: none;
+  font-family: 'Cabin Sketch';
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#call a{
+  position: relative;
+  font-family: 'Cabin Sketch';
+  color: #fff;
+  font-size: 24px;
+  z-index: 5;
+}
+.call_hover {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  background:rgba(72, 152, 193, 0.86);
+  border-radius: 50%;
+  transition: 1s;
+  transform: translate(-400px,50px);
+  z-index: 3;
+  
+} 
+
+#call:hover .call_hover{
+transform: translate(-100px,-10px);
+}
+
+#footer {
+  margin-top:50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+    /* Адаптив  */
+
+@media screen and (min-width: 860px) {
+  #burger{
+    display: none;
+  }
+ 
+}
+
+ @media screen and (max-width: 1024px){
+  h1{
+  font-size: 5em;
+}
+h5{
+  font-size: 2em;
+}
+ } 
+
+ @media screen and (max-width: 860px) {
+  #burger{
+    top: 15px;
+    display: table;
+    margin-right: 5px;
+  }
+  .container_menu{
+    width: 100%;
+  }
+  #menu {
+   width: 130px;
+   height: 65px;
+   overflow: hidden;
+ } 
+  #menu ul{
+   padding: 0;
+   text-align: right;
+ } 
+  .menu{
+    background: #fff;
+  }
+  #menu.active {
+    overflow: visible;
+  }
+  h1{
+  font-size: 3.5em;
+  }
+  h5{
+  font-size: 1.4em;
+  }
+
+  
+}
+
+@media screen and (max-width: 360px){
+  h1{
+  font-size: 3em;
+  }
+  h5{
+  font-size: 1em;
+  }
+}
+
+/* ----------------------------------------------- */

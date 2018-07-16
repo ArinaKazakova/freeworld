@@ -1,0 +1,78 @@
+#gallery
+{
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery .gallery_hover
+{
+    position: relative;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 307px;
+    height: 430px;
+    margin: 10px;
+}
+
+.img_box
+{
+    position: relative;
+}
+                            /* Увеличение при наведении */
+.img_box img
+{
+    width: 307px;
+    height: 430px;
+
+    transition: transform 2s;
+}
+
+#gallery .gallery_hover:hover .img_box img
+{   
+    transform: scale(1.1);
+}
+
+.gallery_hover
+{
+    overflow: hidden;
+}
+/* ______________________________________________________________________ */
+
+                                      /* Появление текста */
+
+.title_box
+{
+    position: absolute;
+    top: 0;
+    height: 430px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+
+}
+
+.title_box h2
+{   
+    padding: 30px 0;
+    font-size: 24px;
+}
+
+.title_box p
+{   padding: 5px;
+    font-size: 18px;
+}
+
+.title_box{
+  transform: scaleX(0);
+}
+
+#gallery .gallery_hover:hover .title_box{
+  transform: scaleX(1);
+  transition: 0.8s;
+}
